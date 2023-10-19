@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='style_quiz.css') }}">
+    <!--  - подстановка из вне -->
+    <title>Викторины</title>
+</head>
+<body>
+    {% if q_list %}
+    <div class="title">
+        <h2>Выберите викторину:</h2> <!-- если кью лист не пустой-->
+    </div>  
+        <form method="post" action="index"> <!-- действует как пост, вызовет индекс-->
+            <select name="quiz"> <!-- селект - выпадающий список. элементы в нем опшины-->
+                
+                {% for id, name in q_list %} <!-- внутр яз прогр, бегает по циклу-->
+                    <option value="{{id}}">{{name}}</option>
+                {% endfor %}     <!-- определяем где кончается цикл-->
+            </select> 
+        <div class="btn">
+            <p>
+                <input type="submit" value="Выбрать">  <!-- кнопка - при нажатии отправка формы-->
+            </p>
+        </div>
+        </form>
+       
+    {% endif %}    
+</body>
+</html>

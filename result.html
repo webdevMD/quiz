@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='style_quiz.css') }}">
+    <title>Викторина</title>
+</head>
+<body>
+        <h1>Результат: {{trueAnswers}} из {{allAnswers}}</h1>
+        <form method="post" action="result">
+            <input type="submit" value="В начало">
+        </form>
+</body>
+</html>

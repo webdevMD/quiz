@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(241, 221, 247);
+  font-size: 20px;
+}
+
+.title {
+  color: #f8eeee;
+  padding: 20px;
+  background-color: #370458;
+  border-radius: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.questions {
+  color: #241b1b;
+}
+.btn {
+  color: #635526;
+  text-decoration: none; 
+  user-select: none; 
+  background: rgb(248, 231, 184); 
+  padding: .1em 1em; 
+  margin-top: 20px;
+  border-radius: 150px;
+  align-items: center;
+  display: inline-block;
+} 
+.btn:hover { background: rgb(243, 157, 59); } 
+.btn:active { background: rgb(114, 67, 5); } 
+
